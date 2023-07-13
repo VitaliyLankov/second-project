@@ -1,95 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="icon" href="icons.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <section class=".blocks">
-      <div class="block first">
-        <p class="just-text">Поведением блока при переполнении управляет свойство  overflow. Это свойство контейнера, а не текстового элемента. Мы ещё вернёмся к нему, когда будем говорить о переполнении контейнеров. Но сейчас без него не получится выполнить задумку. 
-  Свойство overflow назначается родительскому элементу, в который не помещается содержимое. Это содержимое можно скрыть значением hidden или убрать за скроллбар значением scroll. Подробнее про все режимы прочитайте в Доке, а два упомянутых попробуйте на примере.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="icons.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class=".blocks">
+        <div class="block first">
+          <p class="just-text">
+            Поведением блока при переполнении управляет свойство overflow. Это
+            свойство контейнера, а не текстового элемента. Мы ещё вернёмся к
+            нему, когда будем говорить о переполнении контейнеров. Но сейчас без
+            него не получится выполнить задумку. Свойство overflow назначается
+            родительскому элементу, в который не помещается содержимое. Это
+            содержимое можно скрыть значением hidden или убрать за скроллбар
+            значением scroll. Подробнее про все режимы прочитайте в Доке, а два
+            упомянутых попробуйте на примере.
+          </p>
+        </div>
+        <div class="block second">
+          <ul lang="en">
+            <li>pen</li>
+            <li>apple</li>
+            <li>apple-pen</li>
+            <li>pineapple</li>
+            <li>pen-pineapple-apple-pen</li>
+          </ul>
+        </div>
+        <div class="block third">
+          <p>
+            Для вёрстки блока, не привязанного к окружающему его контенту,
+            используйте тег article. Такой блок можно убрать со страницы и
+            вставить в любое другое место сайта. В спецификации у этого тега
+            довольно расплывчатое описание. Из-за этого не всегда понятно, когда
+            использовать, а когда section. Чтобы ответить на этот вопрос,
+            мысленно проведите эксперимент. Уберите этот блок со страницы. Если
+            ничего не изменилось, смысл не потерялся, то можно использовать
+            article.
+          </p>
+        </div>
+        <div class="block fourth">
+          <p>
+            Если нужно процитировать целую фразу, то используйте тег blockquote.
+            У этого тега есть не обязательный, но полезный атрибут cite. Он
+            позволяет указать автора цитаты.
+          </p>
+        </div>
+        <div class="block fifth">
+          <table>
+            <tr>
+              <th>для создания таблицы table</th>
+              <th>для ряда - tr</th>
+              <th>для заголовка ячейки th</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>для обычных ячеек td</td>
+            </tr>
+          </table>
+          <p>
+            ОЧЕНЬ ВАЖНО! можно распологать в несколько столбцов пречисление.
+            Нужно лишь написать ul {columns: 2 or 3 or 4}
+          </p>
+        </div>
+        <div class="block fleks">
+          <h2>Все о флексе</h2>
+          <p>
+            У нас есть блок с тремя вкладками. Кнопки для переключения между
+            вкладками выстроились в одну строку. Нужно сделать так, чтобы кнопки
+            для переключения вкладок перестроились в столбец — одна под другой.
+            Чтобы добиться такого эффекта, достаточно изменить направление
+            основной оси — она должна смотреть не слева направо, а сверху вниз.
+            И поможет это сделать свойство flex-direction. Добавьте
+            флекс-контейнеру .tabs свойство flex-direction: column и посмотрите,
+            как изменится отображение вкладок.
+          </p>
+        </div>
+        <img src="flex.png" alt="fleks" class="flex-img" />
+        <img src="flex2.JPG" alt="fleks" class="flex-img" />
+        <img src="justify.JPG" class="flex-img" alt="justify" />
+        <img src="justify2.JPG" class="flex-img" alt="flex" />
+      </section>
+      <section class="flexer">
+        <div class="flex-container roma">
+          <div class="flex-elem">
+            <p class="card-text">raw-gap управляет расстоянием между рядами</p>
+          </div>
+          <div class="flex-elem">
+            <p class="card-text">
+              column-gap управляет расстоянием между столбцами
+            </p>
+          </div>
+          <div class="flex-elem"></div>
+        </div>
+        <div class="flex-container rema">
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+        </div>
+        <div class="flex-container rima">
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+          <div class="flex-elem"></div>
+        </div>
+      </section>
+      <p class="text">
+        Когда у нас стоит wrap на куче элементов флекса, которые не помещаются в
+        контейнер без врапа, управлять их расположением по горизонатли
+        align-items не получится, тк это типа как одна строка все. Для этого
+        есть align-content. Пример выше
+      </p>
+      <p class="text">
+        Порядок элементов в флексе. Order 1, order 2, order 3. Задаестя в css
+      </p>
+      <p class="text">
+        align-self - когда нужно одному элементу придать особый порядок.
+        Flex-grow:1 когда нужно, чтобы элемент занял все свободно пространство
+      </p>
+      <p class="text">
+        Решить эту задачу поможет свойство flex-basis. Оно указывает размер
+        элемента до того, как на него начнёт действовать расширение. Значением
+        flex-basis может быть размер в любых относительных или абсолютных
+        единицах. Значение по умолчанию — auto. В таком случае элемент занимает
+        столько пространства, сколько требуется для отображения его контента.
+      </p>
+      <div class="flex-container nono">
+        <div class="flex-elem" id="unique"></div>
+        <div class="flex-elem" id="moreUnique"></div>
+        <div class="flex-elem" id="m"></div>
       </div>
-      <div class="block second">
-        <ul lang="en">
-          <li>pen</li>
-          <li>apple</li>
-          <li>apple-pen</li>
-          <li>pineapple</li>
-          <li>pen-pineapple-apple-pen</li>
-        </ul>
-      </div>  
-      <div class="block third">
-        <p>
-          Для вёрстки блока, не привязанного к окружающему его контенту, используйте тег article. Такой блок можно убрать со страницы и вставить в любое другое место сайта.  
-          В спецификации у этого тега довольно расплывчатое описание. Из-за этого не всегда понятно, когда использовать, а когда section. Чтобы ответить на этот вопрос, мысленно проведите эксперимент. Уберите этот блок со страницы. Если ничего не изменилось, смысл не потерялся, то можно использовать article.
-        </p>
+      <div class="flex-container nono">
+        <div class="flex-elem last" id="flBasis">
+          <p class="text">это флекс с flex-basis</p>
+        </div>
+        <div class="flex-elem last"></div>
+        <div class="flex-elem last"></div>
       </div>
-      <div class="block fourth">
-        <p>Если нужно процитировать целую фразу, то используйте тег blockquote.
-          У этого тега есть не обязательный, но полезный атрибут cite. Он позволяет указать автора цитаты.
-        </p>
-      </div>
-      <div class="block fifth">
-        <table>
-          <tr>
-            <th>для создания таблицы table</th> 
-            <th>для ряда - tr</th>
-            <th>для заголовка ячейки th</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>для обычных ячеек td</td>
-            <p>ОЧЕНЬ ВАЖНО! можно распологать в несколько столбцов пречисление. Нужно лишь написать ul {columns: 2 or 3 or 4} </p>
-          </tr>
-        </table>
-      </div>
-      <div class="block fleks">
-        <h2>Все о флексе</h2>
-        <p>У нас есть блок с тремя вкладками. Кнопки для переключения между вкладками выстроились в одну строку. Нужно сделать так, чтобы кнопки для переключения вкладок перестроились в столбец — одна под другой.
-          Чтобы добиться такого эффекта, достаточно изменить направление основной оси — она должна смотреть не слева направо, а сверху вниз. И поможет это сделать свойство flex-direction.
-          Добавьте флекс-контейнеру .tabs свойство flex-direction: column и посмотрите, как изменится отображение вкладок.</p>
-        
-      </div>  
-      <img src="flex.png" alt="fleks" class="flex-img">
-      <img src="flex2.JPG" alt="fleks" class="flex-img">
-      <img src="justify.JPG" class="flex-img">
-      <img src="justify2.JPG" class="flex-img">
-      
-    </section>
-    <section class="flexer">    
-      <div class="flex-container roma">
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-      </div>
-      <div class="flex-container rema">
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-      </div>
-      <div class="flex-container rima">
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-        <div class="flex-elem"></div>
-      </div>
-    </section>
-  </main>    
-</body>
+    </main>
+  </body>
 </html>
