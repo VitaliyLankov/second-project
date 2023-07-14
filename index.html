@@ -98,12 +98,12 @@
           <div class="flex-elem"></div>
         </div>
         <div class="flex-container rema">
-          <div class="flex-elem"></div>
+          <div class="flex-elem elm"></div>
           <div class="flex-elem"></div>
           <div class="flex-elem"></div>
         </div>
         <div class="flex-container rima">
-          <div class="flex-elem"></div>
+          <div class="flex-elem"><p class=text>rima</p></div>
           <div class="flex-elem"></div>
           <div class="flex-elem"></div>
           <div class="flex-elem"></div>
@@ -140,6 +140,16 @@
         единицах. Значение по умолчанию — auto. В таком случае элемент занимает
         столько пространства, сколько требуется для отображения его контента.
       </p>
+      <p class="text">
+        Значением flex-shrink может быть любое положительное целое число.
+        Отрицательные значения игнорируются. По умолчанию его значение 1 — то
+        есть все элементы сжимаются с одинаковой скоростью. Чем больше значение
+        flex-shrink, тем быстрее сжимается элемент. Элементы, у которых
+        установлено свойство flex-shrink: 0, не сжимаются. Их размер не может
+        стать меньше, чем тот, что задан с помощью flex-basis. Значение по
+        умолчанию — flex: 0 1 auto. Расшифровывается это так: flex-grow: 0;
+        flex-shrink: 1; flex-basis: auto;
+      </p>
       <div class="flex-container nono">
         <div class="flex-elem" id="unique"></div>
         <div class="flex-elem" id="moreUnique"></div>
@@ -152,6 +162,55 @@
         <div class="flex-elem last"></div>
         <div class="flex-elem last"></div>
       </div>
+      <section class="position">
+        <h1>Позиционирование</h1>
+        <div class="positioning one">
+          <p class="text">relative</p>
+        </div>
+        <div class="positioning two"></div>
+        <div class="positioning three">
+          <p class="text">
+            Элемент, спозиционированный абсолютно, вырван из потока. Его
+            пространство в потоке заняли элементы, которые следовали за ним.
+          </p>
+        </div>
+        <div class="positioning four">
+          <p class="text">
+            I have fixed positioning
+          </p>
+          <a href="#gridHref">
+            Grids
+          </a>
+        </div>
+        <p class="text">
+          блок с абсолютным позиционированием попробует найти другие
+          родительские элементы с нестатичным позиционированием, чтобы
+          спозиционироваться относительно их границ.
+        </p>
+        <p class="text">
+          Для управления близостью элементов используется свойство z-index. Его
+          название говорит о том, что задействовано третье измерение.
+          Позиционирование идёт уже не по ширине (ось x) и не по высоте (ось y),
+          а по глубине, т.е. по оси z. Значения z-index — целые числа. Чем
+          больше число, тем ближе к нам окажется элемент. По умолчанию у всех
+          элементов одинаковый z-index, равный 0.
+        </p>
+      </section>
+      <div class="moreFlex">
+        <div class="fff"></div>
+        <div class="fff"></div>
+        <div class="fff"></div>
+      </div>
+      <section class="grid" id="gridHref">
+        <div class="flex-elem" id="grider"></div>
+        <div class="flex-elem"></div>
+        <div class="flex-elem"></div>
+        <div class="flex-elem"></div>
+        <div class="flex-elem"></div>
+        <div class="fl"></div>
+        <div class="fl"></div>
+        <div class="fl"></div>
+      </section>
     </main>
   </body>
 </html>
