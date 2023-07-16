@@ -103,7 +103,7 @@
           <div class="flex-elem"></div>
         </div>
         <div class="flex-container rima">
-          <div class="flex-elem"><p class=text>rima</p></div>
+          <div class="flex-elem"><p class="text">rima</p></div>
           <div class="flex-elem"></div>
           <div class="flex-elem"></div>
           <div class="flex-elem"></div>
@@ -175,12 +175,8 @@
           </p>
         </div>
         <div class="positioning four">
-          <p class="text">
-            I have fixed positioning
-          </p>
-          <a href="#gridHref">
-            Grids
-          </a>
+          <p class="text">I have fixed positioning</p>
+          <a href="#gridHref"> Grids </a>
         </div>
         <p class="text">
           блок с абсолютным позиционированием попробует найти другие
@@ -207,10 +203,91 @@
         <div class="flex-elem"></div>
         <div class="flex-elem"></div>
         <div class="flex-elem"></div>
-        <div class="fl"></div>
+        <div class="fl">
+          <p class="text">
+            Элементам в грид не надо задавать размер, грид сам подберет
+          </p>
+        </div>
         <div class="fl"></div>
         <div class="fl"></div>
       </section>
+      <section class="grid2" id="gridHref">
+        <div class="fl"></div>
+        <div class="fl secondGridElement"></div>
+        <div class="fl"></div>
+        <div class="fl"></div>
+        <div class="fl">
+          <p class="text">
+            Элементам в грид не надо задавать размер, грид сам подберет
+          </p>
+        </div>
+        <div class="fl"></div>
+        <div class="fl"></div>
+      </section>
+      <!--
+      <div class="grid3">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      -->
+
+      <section class="container">
+        <div class="grid4 header">
+          <p>I'm footer</p>
+        </div>
+        <div class="grid4 contents">
+          <p>I'm content</p>
+          <p>oh that I am</p>
+        </div>
+        <div class="grid4 aside">
+          <p>I'm aside</p>
+        </div>
+        <div class="grid4 footer">
+          <p>I'm footer</p>
+        </div>
+        <a href="https://www.hoverstat.es/features/julijonas-urbonas/"
+          >interesting</a
+        >
+      </section>
+      <section class="grid5">
+        <div><p class="text">1232</p></div>
+        <div><p class="text">123</p></div>
+        <div><p class="text">123</p></div>
+        <div><p class="text">123</p></div>
+        <div><p class="text">123</p></div>
+        <div><p class="text">123</p></div>
+        <div><p class="text">123</p></div>
+      </section>
+      <h1>Адаптивность размеров</h1>
+      <p class="text">
+        Правило простое: если ваш компонент блочный, вам
+        всегда нужно оставить его ширину в 100%. Настройки размеров перенести в
+        дополнительные классы. Это могут быть классы, описывающие контекст, как
+        в примерах с полями и позиционированием, или дополнительные классы с
+        модификацией размеров. Например, userpic_size_xl или userpic_size_s. Не
+        задавайте размеры основным именам компонентов, размеры могут пригодиться
+        разные. Если ваш компонент ведёт себя строчно или блочно-строчно,
+        управляйте размерами через внутренние свойства. Например, устанавливайте
+        padding у кнопок вместо ширины и высоты. Если вам нужны модификации
+        размеров — также пользуйтесь дополнительными классами, а не основным.
+        Если ваш компонент строчный или блочно-строчный, отдельно задумайтесь,
+        должен ли он быть таким. Ссылки, скорее всего, должны оставаться
+        строчными, но вот поля ввода и изображения, исходя из нашей практики,
+        удобнее сразу делать блочными, чтобы расширить их возможности
+        использования в качестве компонентов. За взаимное расположение элементов
+        чаще всего отвечает лэйаут, а компоненты встраиваются в него в виде
+        блоков.
+      </p>
     </main>
   </body>
 </html>

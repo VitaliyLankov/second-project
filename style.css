@@ -86,7 +86,7 @@ ul {
 
 .rima {
   flex-wrap: wrap;
-  gap: 20px
+  gap: 20px;
   align-content: space-between;
   height: 400px;
 }
@@ -164,9 +164,8 @@ ul {
 
 .moreFlex {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   row-gap: 20px;
-
 }
 
 .fff {
@@ -179,10 +178,12 @@ ul {
 
 .grid {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 20vh 20vh 20vh;
-  gap: 20px 0;
-
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 10vh);
+  gap: 20px 10px;
+  padding: 10px;
+  border: solid 2px red;
+  box-sizing: border-box;
 }
 
 #grider {
@@ -191,4 +192,87 @@ ul {
 
 .fl {
   background-color: darkmagenta;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 150px 1fr 2fr;
+  grid-template-rows: repeat(3, 10vh);
+  gap: 20px 10px;
+  padding: 10px;
+  border: solid 2px red;
+}
+
+.secondGridElement {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.grid3 {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.column {
+  background-color: rgb(255 0 0 / 0.3);
+}
+
+.container {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 5;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "header header header header header"
+    "contents contents contents aside aside"
+    "contents contents contents aside aside"
+    ". footer footer footer footer";
+}
+
+.grid4 {
+  background-color: darkcyan;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.contents {
+  grid-area: contents;
+  justify-content: space-evenly;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.grid5 {
+  display: grid;
+  height: 400px;
+  gap: 10px 10px;
+  grid-template-columns: 300px 200px 400px;
+  justify-content: space-between;
+  justify-items: end;
+  align-items: end;
+  border: solid 2px red;
+}
+
+.grid5 div {
+  background-color: lightgreen;
+  border: solid 2px red;
 }
